@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Nao.</strong>
+                        <p>
+                            I will love you. I will keep on making these things
+                            for you. Even if you don't love me. Can we talk. I will 
+                            do anything to be the person to make you smile. I hope these
+                            projects show the effort I will make for you. Just to talk to you 
+                            and be your friend. Please Nao.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+        <div class="head">
+            <h2>Click The Heart</h2>
+        </div>
+        <!-- Add multiple choice questions -->
+        <div class="quiz">
+            <h2>Answer these questions, please.</h2>
+            <ol>
+                <!-- Question 1 -->
+                <li>
+                    <p>When was our anniversary?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('9/15/2023', 1)">9/15/2023</button></li>
+                        <li><button onclick="checkAnswer('9/28/2023', 1)">9/28/2023</button></li>
+                        <li><button onclick="checkAnswer('10/12/2023', 1)">10/12/2023</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/1.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">This is the first picture I took of you.</div>
+                    </div>
+                </li>
+                <!-- Question 2 -->
+                <li>
+                    <p>What's your favorite flower?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Hydrangeous', 2)">Hydrangeous</button></li>
+                        <li><button onclick="checkAnswer('Rose', 2)">Rose</button></li>
+                        <li><button onclick="checkAnswer('Lily', 2)">Lily</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/4.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">This was the last picture I could take of you.</div>
+                    </div>
+                </li>
+                <!-- Question 3 -->
+                <li>
+                    <p>When is your birthday?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('July 12th', 3)">July 12th</button></li>
+                        <li><button onclick="checkAnswer('June 15th', 3)">June 15th</button></li>
+                        <li><button onclick="checkAnswer('August 5th', 3)">August 5th</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/3-1.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">My favorite picture of you.</div>
+                    </div>
+                </li>
+                <!-- Question 4 -->
+                <li>
+                    <p>What's perfect about you?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Your smile', 4)">Your smile</button></li>
+                        <li><button onclick="checkAnswer('Your eyes', 4)">Your eyes</button></li>
+                        <li><button onclick="checkAnswer('Your kindness', 4)">Your kindness</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/2.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">I love everything about you.</div>
+                    </div>
+                </li>
+                <!-- Question 5 -->
+                <li>
+                    <p>What color do you usually wear? Hint: its not your favorite color</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Black', 5)">Black</button></li>
+                        <li><button onclick="checkAnswer('Pink', 5)">Pink</button></li>
+                        <li><button onclick="checkAnswer('Green', 5)">Blue</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/5.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">You said it not me.</div>
+                    </div>
+                </li>
+                <!-- Question 6 -->
+                <li>
+                    <p>What do I need to fix?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Communication and intimacy', 6)">Communication and intimacy</button></li>
+                        <li><button onclick="checkAnswer('My height', 6)">My height</button></li>
+                        <li><button onclick="checkAnswer('My weight', 6)">My weight</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/6.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">I love you as you are.</div>
+                    </div>
+                </li>
+                <!-- Question 7 -->
+                <li>
+                    <p>What should I do but won't?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Kiss you', 7)">Kiss you</button></li>
+                        <li><button onclick="checkAnswer('Marry you', 7)">Marry you</button></li>
+                        <li><button onclick="checkAnswer('Leave you alone', 7)">Leave you alone</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/7.jpg" alt="Correct" style="width: 50%;">
+                        <div class="line">I will never leave you alone.</div>
+                    </div>
+                </li>
+                <!-- Question 8 -->
+                <li>
+                    <p>What cream do you use?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Cetaphil', 8)">Cetaphil</button></li>
+                        <li><button onclick="checkAnswer('Aveeno', 8)">Aveeno</button></li>
+                        <li><button onclick="checkAnswer('Nivea(gay)', 8)">Nivea(gay)</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/9.png" alt="Correct" style="width: 50%;">
+                        <div class="line">I remember.</div>
+                    </div>
+                </li>
+                <!-- Question 9 -->
+                <li>
+                    <p>Are you addicted to fast food (McDonald's, Burger King)?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Yes', 9)">Yes</button></li>
+                        <li><button onclick="checkAnswer('No', 9)">No</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/12.jpeg" alt="Correct" style="width: 50%;">
+                        <div class="line">HOODUM NAO.</div>
+                    </div>
+                </li>
+                <!-- Question 10 -->
+                <li>
+                    <p>Who hurt you but also made you happy, Nao?</p>
+                    <ul>
+                        <li><button onclick="checkAnswer('Raghav', 10)">Raghav</button></li>
+                        <li><button onclick="checkAnswer('Bob', 10)">Bob</button></li>
+                        <li><button onclick="checkAnswer('Random guy', 10)">Random guy</button></li>
+                    </ul>
+                    <div class="result"></div>
+                    <div class="image" style="display: none;">
+                        <img src="images/10.jpg" alt="Correct" style="width: 50%;">
+                        <div class="line">You're my sunshine and my everything.</div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+         <!-- Add poem section -->
+  
+         <button class="fade-in-button">Poem For Nao</button>
+    <div class="poem-content">
+        <p>Nao my beloved</p>
+        <p>I’m am nothing to ur kindness</p>
+        <p>Nothing I did deserves ur love</p>
+        <p>But ur love I got </p>
+        <p>What is that made me loved by you</p>
+        <p>Sure I had my moments</p>
+        <p>But that was all</p>
+        <p>I took for granted</p>
+        <p>What I had</p>
+        <p>And now it’s gone</p>
+        <p>And I must suffer the consequences</p>
+        <p>Never did I think I would beg</p>
+        <p>For a girl</p>
+        <p>But for u I can be a fool</p>
+        <p>To ur presence</p>
+        <p>Would my death</p>
+        <p>Be ur happinesses</p>
+        <p>Or ur sadnesses</p>
+        <p>U say u don’t care</p>
+        <p>U hate me</p>
+        <p>But why am I still</p>
+        <p>Trying to be ur sweet boy</p>
+        <p>Cause I believe</p>
+        <p>I hope</p>
+        <p>I wish</p>
+        <p>Change is for people who can believe</p>
+        <p>But only could I believe when ur gone</p>
+        <p>Could I only learn with my heart broken</p>
+        <p>Only u can amend my heart</p>
+        <p>But can I heal urs?</p>
+        <p>I love you</p>
+        <p>If it’s meant to be we will find ourselves</p>
+        <p>But u don’t want that</p>
+        <p>But I don’t want to lose to u</p>
+        <p>I’ll change your opinion</p>
+        <p>And change our destiny</p>
+        <p>Change my mistakes</p>
+        <p>And amend my faults</p>
+        <p>For you</p>
+        <p>Only can words mean something</p>
+        <p>When ur alone</p>
+        <p>And today I realize</p>
+        <p>What it truly means to be alone</p>
+        <p>You are the light to my darkness</p>
+        <p>The wood to my fire</p>
+        <p>The music to my ears</p>
+        <p>The blood for my heart</p>
+        <p>The smile that makes me happy</p>
+        <p>When will I be the same for you</p>
+        <p>Words deceive</p>
+        <p>Words lie</p>
+        <p>Promises forgotten</p>
+        <p>Promises ignored</p>
+        <p>But I won’t lose u</p>
+        <p>Cause the promise I made</p>
+        <p>To make u happy and loved</p>
+        <p>Will never be a forgotten</p>
+        <p>-Raghav</p>
+    </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+
+        // Function to check answer
+        function checkAnswer(answer, questionNumber) {
+            const resultDiv = document.querySelectorAll('.result')[questionNumber - 1];
+            const imageDiv = document.querySelectorAll('.image')[questionNumber - 1];
+
+            if (answer === '9/28/2023' || answer === 'Hydrangeous' || answer === 'July 12th' || answer === 'Your smile' || answer === 'Your eyes'||answer === 'Your kindness'|| answer === 'Black' || answer === 'Communication and intimacy' || answer === 'Leave you alone' || answer === 'Nivea(gay)' || answer === 'Yes' || answer === 'Raghav') {
+                resultDiv.innerText = 'Correct!';
+                imageDiv.style.display = 'block';
+            } else {
+                resultDiv.innerText = 'Wrong! Try again.';
+                imageDiv.style.display = 'none';
+            }
+            
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const poemContent = document.querySelector('.poem-content');
+            const fadeInButton = document.querySelector('.fade-in-button');
+        
+            function fadeInPoem() {
+                poemContent.classList.add('fade-in');
+            }
+        
+            fadeInButton.addEventListener('click', fadeInPoem);
+        });
+        
+        
+    </script>
+</body>
+</html>
